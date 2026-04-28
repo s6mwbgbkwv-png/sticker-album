@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>造景贴纸图鉴 - 主页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-leaf"></i> 造景贴纸图鉴
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="gallery.html">图鉴库</a></li>
+                <li><a href="feedback.html">意见箱</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 欢迎横幅 -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>✨ 造景贴纸图鉴</h1>
+                <p class="hero-subtitle">探索·收集·分享你喜爱的贴纸世界</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalStickers">128</span>
+                        <span class="stat-label">收录图鉴</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalBrands">15</span>
+                        <span class="stat-label">收录厂家</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="newThisWeek">3</span>
+                        <span class="stat-label">本周上新</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 日历与上新区域 -->
+        <div class="content-grid">
+            <!-- 日历组件 -->
+            <section class="calendar-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> 发售日历</h2>
+                    <div class="calendar-nav">
+                        <button id="prevMonth" class="btn-icon"><i class="fas fa-chevron-left"></i></button>
+                        <span id="currentMonth">2024年1月</span>
+                        <button id="nextMonth" class="btn-icon"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="calendar-container">
+                    <div class="calendar-weekdays">
+                        <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+                    </div>
+                    <div class="calendar-days" id="calendarDays">
+                        <!-- 由JS动态生成 -->
+                    </div>
+                </div>
+                <div class="release-legend">
+                    <span><span class="dot new-release"></span> 新品发售</span>
+                    <span><span class="dot restock"></span> 再贩</span>
+                    <span><span class="dot preorder"></span> 预售开启</span>
+                </div>
+            </section>
+
+            <!-- 上新预告 -->
+            <section class="upcoming-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-gift"></i> 即将上新</h2>
+                    <a href="gallery.html" class="btn-link">查看全部 →</a>
+                </div>
+                <div class="upcoming-list" id="upcomingList">
+                    <!-- 由JS动态生成 -->
+                </div>
+            </section>
+        </div>
+
+        <!-- 今日新贴纸 -->
+        <section class="today-section">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> 今日推荐</h2>
+            </div>
+            <div class="today-grid" id="todayGrid">
+                <!-- 由JS动态生成 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 造景贴纸图鉴 | 仅供学习交流使用</p>
+            <p class="footer-sub">图片版权归原作者及厂家所有</p>
+        </div>
+    </footer>
+
+    <script src="js/calendar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script>
+        // 初始化主页
+        initializeHomePage();
+    </script>
+</body>
+</html>
