@@ -1,0 +1,30 @@
+{
+  "stickers": [
+    {
+      "id": 1,
+      "name": "森林小动物贴纸",
+      "brand": "Mind Wave",
+      "series": "动物系列",
+      "price": 680,
+      "category": "animal",
+      "image": "",
+      "emoji": "🦊",
+      "description": "可爱的森林动物系列，包含狐狸、兔子、松鼠等多种动物图案。纸质优良，适合手账装饰。",
+      "releaseDate": "2024-01-15",
+      "tags": ["新品", "人气"]
+    },
+    {
+      "id": 2,
+      "name": "和风花朵贴纸",
+      "brand": "古川纸工",
+      "series": "花卉系列",
+      "price": 550,
+      "category": "flower",
+      "image": "",
+      "emoji": "🌸",
+      "description": "传统的和风花卉设计，采用和纸材质，质感温润，适合日系手账风格。",
+      "releaseDate": "2024-01-20",
+      "tags": ["人气"]
+    }
+  ]
+}
