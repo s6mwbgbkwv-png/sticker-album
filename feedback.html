@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>造景贴纸图鉴 - 意见箱</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-leaf"></i> 造景贴纸图鉴
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gallery.html">图鉴库</a></li>
+                <li><a href="feedback.html" class="active">意见箱</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="feedback-section">
+            <div class="feedback-container">
+                <div class="feedback-header">
+                    <h1><i class="fas fa-comments"></i> 项目意见箱</h1>
+                    <p>欢迎提出任何建议、反馈或想要添加的贴纸系列</p>
+                </div>
+
+                <div class="feedback-layout">
+                    <!-- 提交反馈表单 -->
+                    <div class="feedback-form-container">
+                        <h2>提交新反馈</h2>
+                        <form id="feedbackForm" class="feedback-form">
+                            <div class="form-group">
+                                <label for="feedbackType">反馈类型</label>
+                                <select id="feedbackType" required>
+                                    <option value="">请选择类型</option>
+                                    <option value="suggestion">功能建议</option>
+                                    <option value="newsticker">求添加贴纸</option>
+                                    <option value="bug">问题报告</option>
+                                    <option value="other">其他</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feedbackTitle">标题</label>
+                                <input type="text" id="feedbackTitle" placeholder="简要描述你的建议..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feedbackContent">详细内容</label>
+                                <textarea id="feedbackContent" rows="5" placeholder="请详细描述你的建议或需求..." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feedbackContact">联系方式（选填）</label>
+                                <input type="text" id="feedbackContact" placeholder="邮箱或其他联系方式">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="feedbackAgree" required>
+                                    我同意将反馈内容用于网站改进
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> 提交反馈
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- 反馈展示区 -->
+                    <div class="feedback-list-container">
+                        <div class="feedback-list-header">
+                            <h2>反馈广场</h2>
+                            <div class="feedback-stats">
+                                <span><i class="fas fa-lightbulb"></i> 建议: <span id="suggestionCount">12</span></span>
+                                <span><i class="fas fa-check-circle"></i> 已采纳: <span id="adoptedCount">5</span></span>
+                                <span><i class="fas fa-clock"></i> 处理中: <span id="processingCount">3</span></span>
+                            </div>
+                        </div>
+
+                        <div class="feedback-filter">
+                            <button class="filter-btn active" data-filter="all">全部</button>
+                            <button class="filter-btn" data-filter="suggestion">功能建议</button>
+                            <button class="filter-btn" data-filter="newsticker">求添加</button>
+                            <button class="filter-btn" data-filter="bug">问题报告</button>
+                            <button class="filter-btn" data-filter="other">其他</button>
+                        </div>
+
+                        <div class="feedback-list" id="feedbackList">
+                            <!-- 由JS动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 造景贴纸图鉴 | 仅供学习交流使用</p>
+            <p class="footer-sub">图片版权归原作者及厂家所有</p>
+        </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 初始化意见箱页面
+        initializeFeedbackPage();
+    </script>
+</body>
+</html>
